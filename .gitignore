@@ -17,8 +17,8 @@ runs/
 models/
 
 # Dataset dan video lokal
-dataset-vehicles/
-data/
+# dataset-vehicles/
+# data/
 
 # Editor dan sistem operasi
 .vscode/

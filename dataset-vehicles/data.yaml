@@ -1,0 +1,15 @@
+
+path: "C:/Users/Acer/Documents/1. Nurul Fatimah Azmi/2. PENS/7. SEMESTER 7/WORKSHOP VISI KOMPUTER/traffic-analysis/dataset-vehicles"
+
+train: images/train
+val: images/val
+test: images/test
+
+nc: 5
+
+names:
+  0: Car
+  1: Motorcycle
+  2: Truck
+  3: Bus
+  4: Bicycle

@@ -1,5 +1,8 @@
 from ultralytics import YOLO
+from pathlib import Path
 import argparse
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 def train_model(data_config, epochs):
     # Load a model
@@ -24,11 +27,11 @@ def train_model(data_config, epochs):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Lab 02: Custom Model Training")
-    parser.add_argument("--data", type=str, default="data.yaml", help="Path to data.yaml file")
+    parser.add_argument("--data", type=str, default="../dataset-vehicles/data.yaml", help="Path to data.yaml file")
     parser.add_argument("--epochs", type=int, default=10, help="Number of training epochs")
     args = parser.parse_args()
 
     # Note: You need a valid data.yaml and dataset structure to run this.
     # See README.md for instructions on how to prepare the dataset.
-    # train_model(args.data, args.epochs)
+    train_model(args.data, args.epochs)
     print("This is a boilerplate. To run training, ensure you have a dataset and uncomment the train_model call.")

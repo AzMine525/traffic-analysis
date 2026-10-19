@@ -2,6 +2,9 @@ import cv2
 from ultralytics import YOLO
 import argparse
 import supervision as sv
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 def main(source, model_path):
     # Load the model (use your custom trained model from Lab 02 or a standard one)
@@ -48,7 +51,7 @@ def main(source, model_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Lab 03: Object Detection")
-    parser.add_argument("--source", type=str, default="../data/sample.mp4", help="Path to video file")
+    parser.add_argument("--source", type=str, default=str(BASE_DIR / "data" / "traffic.mp4"), help="Path to video file")
     parser.add_argument("--model", type=str, default="yolov8n.pt", help="Path to model weights")
     args = parser.parse_args()
 

@@ -37,7 +37,7 @@ def main(source):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Lab 01: Video Ingestion")
-    parser.add_argument("--source", type=str, default="../data/sample.mp4", help="Path to video file or webcam index")
+    parser.add_argument("--source", type=str, default="../data/traffic.mp4", help="Path to video file or webcam index")
     args = parser.parse_args()
 
     main(args.source)

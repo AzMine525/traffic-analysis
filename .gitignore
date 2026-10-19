@@ -1,0 +1,26 @@
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Training cache
+*.cache
+
+# YOLO training outputs
+runs/
+models/
+
+# Dataset dan video lokal
+dataset-vehicles/
+data/
+
+# Editor dan sistem operasi
+.vscode/
+.DS_Store
+Thumbs.db
